@@ -40,7 +40,7 @@
   ],
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/gitlab": "^13.0.3",
+    "@semantic-release/github": "^10.0.2",
     "@semantic-release/npm": "^12.0.0",
     "semantic-release": "^23.0.6"
   }
