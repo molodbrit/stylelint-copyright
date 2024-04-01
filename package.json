@@ -5,7 +5,8 @@
   "private": false,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "stylelint",
@@ -28,6 +29,15 @@
     "type": "git",
     "url": "git+https://github.com/molodbrit/stylelint-copyright.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/gitlab": "^13.0.3",
