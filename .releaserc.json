@@ -1,0 +1,31 @@
+{
+  "branches": ["master"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/gitlab",
+    "@semantic-release/npm",
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["package.json"],
+        "message": "MRG-0000 release: v${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ]
+  ],
+  "analyzeCommits": {
+    "preset": "ucs",
+    "releaseRules": [
+      {"type": "fix", "release": "patch"},
+      {"type": "perf", "release": "patch"},
+      {"type": "refactor", "release": "patch"},
+      {"type": "build", "release": "patch"},
+      {"type": "feat", "release": "minor"},
+      {"type": "feature", "release": "minor"},
+      {"type": "breaking", "release": "major"},
+      {"tag": "chore", "release": false},
+      {"tag": "ci", "release": false},
+      {"tag": "docs", "release": false}
+    ]
+  }
+}
